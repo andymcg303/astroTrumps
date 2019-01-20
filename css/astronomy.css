@@ -1,0 +1,46 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url("../images/jackson-hendry-437514-unsplash.jpg");
+    background-size: cover;
+    background-position: center; 
+    padding-top: 70px;
+}
+
+.navbar-brand{
+    font-family: 'Share Tech', sans-serif;
+    font-size: 2rem;
+}
+
+.list-group-item{
+    font-size: 0.75rem;
+}
+
+@media (min-width: 576px) {
+    .card-col {
+        max-width: 253px;
+    }
+    .list-group-item{
+        padding: 0.3rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-header{
+        font-size: 1.4rem
+    }
+    .list-group-item{
+        font-size: 1rem;
+    }
+}
+
+.navbar.scrolled{
+    background: black;
+    transition: background 500ms;
+}
+
+.card{
+    border-width: 3px;
+}
