@@ -3,6 +3,7 @@ $(function () {
     var $navbar =  $(".navbar");
     var $collapse = $(".collapse");
     var $navbarToggler = $(".navbar-toggler");  
+    var $badge = $(".badge");
 
     $(window).resize(function(){
         if ($navbarToggler.is( ":visible" ) && ($collapse.is(":visible"))) { 
@@ -29,6 +30,15 @@ $(function () {
         }       
         
     });
+
+    $badge.click(function(){
+        $(this).css("background", "red");
+    });
+
+    $("#reset").click(function(){
+        $badge.css("background", "#6c757d")
+    });
+
 });
 
 
