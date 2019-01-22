@@ -1,11 +1,13 @@
 $(function () {
     
-    var $navbar =  $(".navbar"); 
+    var $navbar =  $(".navbar");
+    var $collapse = $(".collapse");
+    var &navbarToggler = $(".navbar-toggler");  
 
     $(window).resize(function(){
-        if ($(".navbar-toggler-icon").is( ":visible" ) && ($(".collapse").is( ":visible" ))) { 
+        if ($navbarToggler.is( ":visible" ) && ($collapse.is(":visible"))) { 
             $navbar.addClass("scrolled"); 
-        } else if (($(document).scrollTop() === 0) && (!$(".navbar-toggle-icon").is(":visible"))) {
+        } else if (($(document).scrollTop() === 0) && (!$navbarToggler.is(":visible"))) {
             $navbar.removeClass("scrolled")
         }
     });
@@ -13,12 +15,12 @@ $(function () {
     $(document).scroll(function () {
         if ($(this).scrollTop() > 0){
             $navbar.addClass("scrolled");
-        } else if (($(this).scrollTop() === 0) && ((!$( ".collapse" ).is( ":visible" ))) || (!$( ".navbar-toggler" ).is( ":visible" ))){
+        } else if (($(this).scrollTop() === 0) && ((!$collapse.is(":visible"))) || (!$navbarToggler.is(":visible"))){
             $navbar.removeClass("scrolled")
         }
     });
     
-    $(".navbar-toggler").click(function() {
+    $navbarToggler.click(function() {
 
         if (($(document).scrollTop() === 0) && (!$navbar.hasClass("scrolled"))) {
             $navbar.addClass("scrolled");
