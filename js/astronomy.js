@@ -2,7 +2,7 @@ $(function () {
     
     var $navbar =  $(".navbar");
     var $collapse = $(".collapse");
-    var &navbarToggler = $(".navbar-toggler");  
+    var $navbarToggler = $(".navbar-toggler");  
 
     $(window).resize(function(){
         if ($navbarToggler.is( ":visible" ) && ($collapse.is(":visible"))) { 
